@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    background-color: #d9dce6;
+    color: #000;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .dashboard-container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    background-color: #000051;
+    color: white;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px;
+    gap: 30px;
+  }
+  
+  .sidebar-header h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  .sidebar-header h2 span {
+    color: #40e0d0;
+  }
+  
+  .user-info {
+    text-align: center;
+  }
+  
+  .user-info .avatar {
+    font-size: 3rem;
+    background: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .user-info .user-role {
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  
+  /* Navigation menu */
+  .nav-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .nav-menu ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-menu ul li .icon {
+    font-size: 1.3rem;
+  }
+  
+  .nav-menu ul li.active,
+  .nav-menu ul li:hover {
+    background-color: white;
+    color: #000051;
+    font-weight: 700;
+  }
+  
+/* Add this after your existing .nav-menu ul li:hover style */
+
+.nav-menu ul li:hover .icon img,
+.nav-menu ul li.active .icon img {
+  filter: brightness(0) saturate(100%) invert(8%) sepia(77%) saturate(6149%) hue-rotate(239deg) brightness(91%) contrast(135%);
+}
+
+  /* Logout */
+  .logout {
+    margin-top: auto;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 10px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+  }
+  
+  .logout:hover {
+    background-color: #f0f0f0;
+    color: #000051;
+  }
+  
+ /* Main Content Styles */
+  .main-content {
+    flex: 1;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+.header {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.brgy-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.brgy-logo {
+    width: 50px;
+    height: 50px;
+}
+
+.brgy-info h1 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.content {
+    padding: 20px;
+}
+
+.residents-header {
+    margin-bottom: 20px;
+}
+
+.residents-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.residents-title i {
+    font-size: 24px;
+    color: #4a90e2;
+}
+
+.residents-title h2 {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.residents-title p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+}
+
+.tab {
+    padding: 8px 16px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: #666;
+    border-radius: 4px;
+}
+
+.tab.active {
+    background-color: #000051;
+    color: white;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.search-bar label {
+    color: #666;
+    font-weight: 500;
+}
+
+.search-input {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 6px;
+    padding: 4px;
+    border: 1px solid #e5e7eb;
+}
+
+.search-input input {
+    border: none;
+    padding: 8px 12px;
+    outline: none;
+    width: 240px;
+    font-size: 0.95rem;
+}
+
+.search-input button {
+    background: #3b82f6;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.search-input button:hover {
+    background: #2563eb;
+}
+
+.table-container {
+    background: white;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow-x: auto;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 4px;
+}
+
+.table-header h3 {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.add-button {
+    background-color: #22c55e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.add-button:hover {
+    background-color: #16a34a;
+}
+
+.add-button i {
+    font-size: 14px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    white-space: nowrap;
+}
+
+tr:hover {
+    background-color: #f8f9fa;
+    transition: background-color 0.2s;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+th {
+    font-weight: 600;
+    color: #333;
+}
+
+td {
+    color: #666;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    min-width: 90px;
+}
+
+.actions button {
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.actions button:hover {
+    opacity: 0.8;
+}
+
+.edit {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.delete {
+    background-color: #ef4444;
+    color: white;
+}
+
+ header {
+    background-color: white;
+    padding: 10px 20px;
+  }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 70px;
+        padding: 10px;
+    }
+    
+    .logo, .admin-info, .nav-item span {
+        display: none;
+    }
+    
+    .main-content {
+        margin-left: 70px;
+    }
+    
+    .nav-item {
+        justify-content: center;
+        padding: 15px;
+    }
+    
+    .nav-item i {
+        margin: 0;
+    }
+}

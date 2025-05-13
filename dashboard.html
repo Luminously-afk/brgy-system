@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Barangay SmartLink Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2><span>SMART</span> LINK +</h2>
+      </div>
+      <div class="user-info">
+        <div class="avatar">👩‍🦰</div>
+        <div class="user-role">Admin</div>
+      </div>
+      <nav class="nav-menu">
+        <ul>
+          <li class="active" id="dashboard"><span class="icon"><img src="img/dashboard.svg"/></span> Dashboard</li>
+          <li id="resident"><span class="icon"><img src="img/people.svg"/></span> Residents</li>
+          <li id="pwd"><span class="icon" ><img src="img/pwd.svg"/></span> PWD ID</li>
+          <li id="brgy"><span class="icon" ><img src="img/id.svg"/></span> Barangay ID</li>
+          <li id="announce"><span class="icon" ><img src="img/anounce.svg"/></span> Announcements</li>
+          <li id="report"><span class="icon" ><img src="img/reports.svg"/></span> Reports</li>
+          <li id="settings"><span class="icon" ><img src="img/settings.svg"/></span> Settings</li>
+        </ul>
+      </nav>
+      <div class="logout">Log Out</div>
+    </aside>
+    <main class="main-content">
+      <header class="top-header">
+        <img src="img/logo.png" alt="Barangay Logo" />
+        <h1>Barangay Sta.Cruz Pasig City</h1>
+      </header>
+      <section class="welcome-section">
+        <div class="welcome-text">
+          <h2><em>HI, Admin Jiro!</em></h2>
+          <p><em>Welcome <span>back</span> to Smart Link!</em></p>
+        </div>
+        <div class="welcome-avatar">👩‍🦰</div>
+      </section>
+      <section class="overview">
+        <h3>Overview</h3>
+        <div class="stats-cards">
+          <div class="card light-blue">
+            <strong>Total No. of Residents</strong>
+            <span>2542</span>
+          </div>
+          <div class="card dark-blue">
+            <strong>Total No. PWD Residents</strong>
+            <span>314</span>
+          </div>
+          <div class="card light-blue">
+            <strong>Total No. of Barangay ID holder</strong>
+            <span>1258</span>
+          </div>
+          <div class="card dark-blue">
+            <strong>Total No. of PWD ID holder</strong>
+            <span>212</span>
+          </div>
+        </div>
+      </section>
+      <section class="events-announcements">
+        <div class="events">
+          <h3>Events</h3>
+          <div class="content-box">
+            <p><strong>PWD sports and Wellness day</strong></p>
+            <p><strong>Date:</strong> May 20, 2025 <strong>Venue:</strong> Barangay Covered Court <strong>Join us for a day of inclusive games, light exercises, and wellness ......</strong></p>
+          </div>
+        </div>
+        <div class="announcements">
+          <h3>Announcements</h3>
+          <div class="content-box">
+            <p><em>System Maintenance Notice</em></p>
+            <p>📅 <strong>Date:</strong> April 30, 2025 <strong>Time:</strong> 10:00 PM – 2:00 AM Please be advised that Barangay SmartLink+ will undergo...</p>
+          </div>
+          <div class="content-box">
+            <p><em>PWD ID renewal now online.</em></p>
+            <p><strong>Posted:</strong> April 28, 2025 You can now renew your PWD ID online through your dashboard! No new medical check-up required i....</p>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <p>@barangaysmartlink/barangaystacruzpasigcity</p>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+
+    //make a listener for id resident
+    const resident = document.getElementById('resident');
+    resident.addEventListener('click', function() {
+      window.location.href = 'residents.html';
+    });
+  </script>
+</body>
+</html>

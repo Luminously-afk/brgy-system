@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Barangay SmartLink Dashboard</title>
+  <link rel="stylesheet" href="css/residents.css" />
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2><span>SMART</span> LINK +</h2>
+      </div>
+      <div class="user-info">
+        <div class="avatar">👩‍🦰</div>
+        <div class="user-role">Admin</div>
+      </div>
+      <nav class="nav-menu">
+        <ul>
+          <li id="dashboard"><span class="icon"><img src="img/dashboard.svg"/></span> Dashboard</li>
+          <li class="active" id="resident"><span class="icon"><img src="img/people.svg"/></span> Residents</li>
+          <li id="pwd"><span class="icon" ><img src="img/pwd.svg"/></span> PWD ID</li>
+          <li id="brgy"><span class="icon" ><img src="img/id.svg"/></span> Barangay ID</li>
+          <li id="announce"><span class="icon" ><img src="img/anounce.svg"/></span> Announcements</li>
+          <li id="report"><span class="icon" ><img src="img/reports.svg"/></span> Reports</li>
+          <li id="settings"><span class="icon" ><img src="img/settings.svg"/></span> Settings</li>
+        </ul>
+      </nav>
+      <div class="logout">Log Out</div>
+    </aside>
+    <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <div class="brgy-info">
+                    <img src="img/logo.png" alt="Barangay Logo" class="brgy-logo">
+                    <h1>Barangay Sta.Cruz Pasig City</h1>
+                </div>
+            </header>
+
+            <section class="content">
+                <div class="residents-header">
+                    <div class="residents-title">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h2>Residents</h2>
+                            <p>Manage your residents</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <div class="tabs">
+                        <button class="tab active">Residents</button>
+                        <button class="tab">PWD</button>
+                    </div>
+                    <div class="search-bar">
+                        <label>Filtered By</label>
+                        <div class="search-input">
+                            <input type="text" placeholder="Search">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <div class="table-header">
+                        <h3>List of Residents</h3>
+                        <button class="add-button">
+                            <i class="fas fa-plus"></i>
+                            Add New
+                        </button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Resident No.</th>
+                                <th>Last name</th>
+                                <th>First name</th>
+                                <th>Middle name</th>
+                                <th>Gender</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>12345</td>
+                                <td>Saturo</td>
+                                <td>Gojo</td>
+                                <td>Ji</td>
+                                <td>Male</td>
+                                <td class="actions">
+                                    <button class="edit"><i class="fas fa-edit"></i></button>
+                                    <button class="delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>45688</td>
+                                <td>Manalo</td>
+                                <td>Angelika</td>
+                                <td>Alcasid</td>
+                                <td>Female?</td>
+                                <td class="actions">
+                                    <button class="edit"><i class="fas fa-edit"></i></button>
+                                    <button class="delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10278</td>
+                                <td>Dela Cruz</td>
+                                <td>Arvie</td>
+                                <td>Mendoza</td>
+                                <td>Male</td>
+                                <td class="actions">
+                                    <button class="edit"><i class="fas fa-edit"></i></button>
+                                    <button class="delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>67543</td>
+                                <td>Tizon</td>
+                                <td>Aiza</td>
+                                <td>Mae</td>
+                                <td>Female</td>
+                                <td class="actions">
+                                    <button class="edit"><i class="fas fa-edit"></i></button>
+                                    <button class="delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>56342</td>
+                                <td>Villena</td>
+                                <td>Eleazar</td>
+                                <td>Mae</td>
+                                <td>Male</td>
+                                <td class="actions">
+                                    <button class="edit"><i class="fas fa-edit"></i></button>
+                                    <button class="delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+  </div>
+  <script>
+    const resident = document.getElementById('dashboard');
+    resident.addEventListener('click', function() {
+      window.location.href = 'dashboard.html';
+    });
+  </script>
+</body>
+</html>
